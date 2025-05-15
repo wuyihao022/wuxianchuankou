@@ -601,7 +601,7 @@ void broadcastUDP() {
       udp.beginPacket(IPAddress(192,168,4,255), UDP_PORT);
       udp.write(message.c_str(), message.length());
       udp.endPacket();
-      Serial.println("UDP Broadcast to AP network: " + message);
+      // Serial.println("UDP Broadcast to AP network: " + message);
     }
     
     // 在STA模式下，或双模式下，发送全网广播
@@ -611,14 +611,14 @@ void broadcastUDP() {
       udp.beginPacket(broadcastIP, UDP_PORT);
       udp.write(message.c_str(), message.length());
       udp.endPacket();
-      Serial.println("UDP Broadcast to STA network: " + message);
+      // Serial.println("UDP Broadcast to STA network: " + message);
     }
     
     // 全网广播，作为备用
     udp.beginPacket("255.255.255.255", UDP_PORT);
     udp.write(message.c_str(), message.length());
     udp.endPacket();
-    Serial.println("UDP Broadcast global: " + message);
+    // Serial.println("UDP Broadcast global: " + message);
   }
 }
 

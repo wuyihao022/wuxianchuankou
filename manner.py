@@ -169,8 +169,8 @@ class ESP8266Manager:
         restart_button = ttk.Button(top_buttons, text="重启设备", command=self.restart_device)
         restart_button.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2, pady=2)
         
-        connect_serial = ttk.Button(top_buttons, text="连接到Telnet终端", command=self.connect_telnet)
-        connect_serial.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2, pady=2)
+        # connect_serial = ttk.Button(top_buttons, text="连接到Telnet终端", command=self.connect_telnet)
+        # connect_serial.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2, pady=2)
         
         # 底部按钮
         bottom_buttons = ttk.Frame(action_frame)
